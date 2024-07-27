@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,27 +7,35 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <main class="main">
-        <section class="section">
-            <img class="section__logo" src="assets/logo.png" alt="logo de alura">
-            <div class="section__contenido">
-                <textarea name="textoIngresado" id="texto_ingresado" placeholder="Ingrese el texto aquí"></textarea>
-                <div>
-                    <p class="aviso"><img class="icono" src="assets/exclamation.png" alt="signo de exclamacion"> Solo letras minúsculas y sin acentos</p>
-                    <div class="boton__contenedor">
-                        <button class="boton encriptar" onclick="encriptar();">Encriptar</button>
-                        <button class="boton desencriptar" onclick="desencriptar();">Desencriptar</button>
+    <div class="contenedor__global">
+        <div class="contenedor">
+            <header class="header">
+                <img class="header__logo" src="assets/logo.png" alt="logo de alura">
+            </header>
+
+            <main class="main">
+                <section class="section__contenido">
+                    <textarea name="textoIngresado" id="texto_ingresado" placeholder="Ingrese el texto aquí"></textarea>
+                    <div class="section__contenido__botones">
+                        <p class="parrafo__condicional"><img class="parrafo__condicional__img" src="assets/exclamation.png" alt="signo de exclamacion"> Solo letras minúsculas y sin acentos</p>
+                        <div class="boton__contenido">
+                            <button class="boton boton-encriptar" onclick="encriptar();">Encriptar</button>
+                            <button class="boton boton-desencriptar" onclick="desencriptar();">Desencriptar</button>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="contenido__resultado">
-                <img class="img__muneco" src="assets/muneco.png" alt="imagen de un muñeco">
-                <h2 class="titulo__secundario">Ningún mensaje fue encontrado</h2>
-                <p id="texto_encriptado">Ingresa el texto que desees encriptar o desencriptar.</p>
-                <button class="boton copiar" onclick="copiarTexto();" hidden>Copiar</button>
-            </div>
-        </section>
-    </main>
+                </section>
+                <section class="section__mensaje">
+                    <img class="section__mensaje__img" src="assets/muneco.png" alt="imagen de un muñeco">
+                    <h2 class="section__mensaje__titulo">Ningún mensaje fue encontrado</h2>
+                    <p id="texto_encriptado">Ingresa el texto que desees encriptar o desencriptar.</p>
+                    <button class="boton boton-copiar" onclick="copiarTexto();" hidden>Copiar</button>
+                </section>
+            </main>
+        </div>
+    </div>
+    <footer class="footer">
+        <p class="footer__parrafo">Rebeca Ruiz</p>
+    </footer>
     <script src="app.js"></script>
 </body>
 </html>
