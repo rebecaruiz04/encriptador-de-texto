@@ -9,13 +9,14 @@
 <body>
     <div class="contenedor__global">
         <div class="contenedor">
+
             <header class="header">
                 <img class="header__logo" src="assets/logo.png" alt="logo de alura">
             </header>
 
             <main class="main">
                 <section class="section__contenido">
-                    <textarea name="textoIngresado" id="texto_ingresado" placeholder="Ingrese el texto aquí"></textarea>
+                    <textarea id="texto_ingresado" placeholder="Ingrese el texto aquí"></textarea>
                     <div class="section__contenido__botones">
                         <p class="parrafo__condicional"><img class="parrafo__condicional__img" src="assets/exclamation.png" alt="signo de exclamacion"> Solo letras minúsculas y sin acentos</p>
                         <div class="boton__contenido">
@@ -31,11 +32,14 @@
                     <button class="boton boton-copiar" onclick="copiarTexto();" hidden>Copiar</button>
                 </section>
             </main>
+
         </div>
     </div>
+
     <footer class="footer">
         <p class="footer__parrafo">Rebeca Ruiz</p>
     </footer>
-    <script src="app.js"></script>
+    
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 :root {
-    --color-background: #D8DFE8;
+    --color-background: #F3F5FC;
     --color-primario: #0A3871;
     --color-secundario: #E8E8E8;
     --color-terciario: #9B9797;
@@ -57,7 +57,7 @@ p {
     font-family: var(--fuente-inter);
     background-color: transparent;
     color: var(--color-primario);
-    height: 40rem;
+    height: 37.5rem;
     padding: 0;
     margin-bottom: 6.4rem;
     border: none;
@@ -115,9 +115,6 @@ p {
 .section__mensaje__titulo, #texto_encriptado {
     text-align: center;
 }
-/*#texto_encriptado {
-    height: 100%;
-}*/
 .boton-copiar {
     width: 100%;
 }
@@ -173,7 +170,7 @@ p {
         padding-top: 12.8rem;
         padding-bottom: 3.2rem;
         justify-content: space-between;
-        flex: 1;
+        flex-grow: 1;
     }
     #texto_ingresado {
         max-width: 100%;
@@ -188,8 +185,8 @@ p {
         justify-content: center;
         margin-top: 0;
         padding: 3.2rem;
-        height: 84.4rem;
-        width: 35rem;
+        height: 88rem;
+        width: 33.6rem;
     }
     .section__mensaje img {
         display: block;
@@ -206,9 +203,5 @@ p {
     }
     .main {
         gap: 8rem;
-    }
-    .section__mensaje {
-        height: 94.4rem;
-        width: 40rem;
     }
 }
