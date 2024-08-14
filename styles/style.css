@@ -95,6 +95,10 @@ p {
     font-family: var(--fuente-inter);
     padding: 2.4rem;
 }
+.boton:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
 .boton-encriptar {
     background-color: var(--color-primario);
     color: var(--color-white);
