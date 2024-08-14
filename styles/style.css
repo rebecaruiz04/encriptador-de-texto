@@ -42,15 +42,14 @@ p {
     max-width: 144rem;
     width: 100%;
     margin: 0 auto;
-}
-.contenedor {
-    margin: 2.4rem 1.6rem;
+    padding: 2.4rem 1.6rem;
+    overflow-x: hidden;
 }
 .header__logo {
     width: auto;
 }
 .main {
-    margin-top: 8rem;
+    margin-top: 5rem;
     margin-bottom: 4rem;
 }
 #texto_ingresado {
@@ -59,9 +58,9 @@ p {
     font-family: var(--fuente-inter);
     background-color: transparent;
     color: var(--color-primario);
-    height: 37.5rem;
+    height: 40rem;
     padding: 0;
-    margin-bottom: 6.4rem;
+    margin-bottom: 4rem;
     border: none;
     outline: none;
     resize: none;
@@ -94,6 +93,7 @@ p {
     font-size: 1.6rem;
     font-family: var(--fuente-inter);
     padding: 2.4rem;
+    
 }
 .boton:hover {
     background-color: var(--color-black);
@@ -135,8 +135,8 @@ p {
 }
 
 @media (min-width: 375px) {
-    .contenedor {
-        margin: 4rem;
+    .contenedor__global {
+        padding: 4rem;
     }
     .main {
         margin-top: 11.6rem;
@@ -146,7 +146,7 @@ p {
         flex-direction: column;
     }
     #texto_ingresado {
-        max-width: 100%;
+        margin-bottom: 6.4rem;
     }
     .boton__contenido {
         flex-direction: row;
@@ -186,7 +186,6 @@ p {
     }
     #texto_ingresado {
         max-width: 100%;
-        padding: 0;
     }
     .boton__contenido {
         width: 100%;

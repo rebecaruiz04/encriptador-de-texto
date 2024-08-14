@@ -14,18 +14,20 @@ txtArea.addEventListener("input", e => {
 
 // Evento de botón encriptar
 function btnEncriptar() {
-    validarTextoIngresado(txtArea.value);
-    let textoEncriptado = remplazarTexto(txtArea.value, 0, 1);
-    mensaje.innerHTML = textoEncriptado;
-    cambiarEstilos();
+    if (validarTextoIngresado(txtArea.value)){
+        let textoEncriptado = remplazarTexto(txtArea.value, 0, 1);
+        mensaje.innerHTML = textoEncriptado;
+        cambiarEstilos();
+    }; 
 }
 
 // Evento de botón desencriptar
 function btnDesencriptar() {
-    validarTextoIngresado(txtArea.value);
-    let textoDesencriptado = remplazarTexto(txtArea.value, 1, 0);
-    mensaje.innerHTML = textoDesencriptado;
-    cambiarEstilos();
+    if (validarTextoIngresado(txtArea.value)) {
+        let textoDesencriptado = remplazarTexto(txtArea.value, 1, 0);
+        mensaje.innerHTML = textoDesencriptado;
+        cambiarEstilos();
+    };
 }
 
 // Función para copiar el texto del mensaje
@@ -43,12 +45,13 @@ function copiarTexto() {
     });
 }
 
-// Función que valida el texto ingresado, que no sean mayúsculas ni con tilde
+// Función que valida el texto ingresado, que no sean mayúsculas, con tilde o que el campo esté vacío
 function validarTextoIngresado(texto) {
-    if (!/^[a-z\s]*$/.test(texto)) {
-        alert('El texto no debe contener letras mayúsculas ni tildes.');
-        return;
+    if (texto === "" || !/^[a-z\s]*$/.test(texto)) {
+        alert(texto === "" ? 'No ha ingresado ningún texto. Debe por lo menos ingresar un caracter.' : 'El texto no debe contener letras mayúsculas ni tildes.');
+        return false;
     }
+    return true;
 }
 
 // Función para reeemplazar textos
