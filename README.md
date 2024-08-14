@@ -40,3 +40,10 @@ Este proyecto es una aplicación web que permite encriptar y desencriptar texto 
 - `index.html`: Contiene la estructura HTML de la aplicación.
 - `styles.css`: Estilos CSS para el diseño y layout del proyecto.
 - `script.js`: Lógica de encriptación y desencriptación.
+
+## Tecnologías Utilizadas
+
+- HTML5
+- CSS3
+- JavaScript
+- Google Fonts
