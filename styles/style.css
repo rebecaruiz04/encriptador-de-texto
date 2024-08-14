@@ -63,7 +63,6 @@ p {
     padding: 0;
     margin-bottom: 6.4rem;
     border: none;
-    text-transform: lowercase;
     outline: none;
     resize: none;
     scrollbar-width: 0;
@@ -115,7 +114,7 @@ p {
 .section__mensaje img {
     display: none;
 }
-.section__mensaje__titulo, #texto_encriptado {
+.section__mensaje__titulo, #mensaje {
     text-align: center;
 }
 .boton-copiar {
@@ -158,7 +157,6 @@ p {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 80%;
     }
     .contenedor {
         display: flex;
