@@ -38,7 +38,9 @@ p {
     color: var(--color-parrafo);
 }
 .contenedor__global {
-    max-width: 1440rem;
+    min-height: 100vh;
+    max-width: 144rem;
+    width: 100%;
     margin: 0 auto;
 }
 .contenedor {
@@ -61,6 +63,7 @@ p {
     padding: 0;
     margin-bottom: 6.4rem;
     border: none;
+    text-transform: lowercase;
     outline: none;
     resize: none;
     scrollbar-width: 0;
@@ -151,8 +154,15 @@ p {
 }
 
 @media (min-width: 768px) {
+    .contenedor__global {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 80%;
+    }
     .contenedor {
         display: flex;
+        flex-grow: 1;
         gap: 4rem;
     }
     .header__logo {
@@ -185,8 +195,7 @@ p {
         justify-content: center;
         margin-top: 0;
         padding: 3.2rem;
-        height: 88rem;
-        width: 33.6rem;
+        width: 35rem;
     }
     .section__mensaje img {
         display: block;
