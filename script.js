@@ -48,7 +48,7 @@ function copiarTexto() {
 // Función que valida el texto ingresado, no aceptará mayúsculas, tilde o ni que el campo esté vacío
 function validarTextoIngresado(texto) {
     if (texto === "" || !/^[a-z\s]*$/.test(texto)) {
-        alert(texto === "" ? 'No ha ingresado ningún texto. Debe por lo menos ingresar un caracter.' : 'El texto no debe contener letras mayúsculas ni tildes.');
+        alert(texto === "" ? 'No ha ingresado ningún texto. Por lo menos debe ingresar un caracter.' : 'El texto no debe contener letras mayúsculas ni tildes.');
         return false;
     }
     return true;
