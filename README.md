@@ -1,6 +1,6 @@
 # Encriptador de Texto
 
-Este proyecto es una aplicación web que permite encriptar y desencriptar texto según reglas específicas, asegurando que el texto sea procesado adecuadamente antes de la encriptación.
+Este proyecto es una aplicación web que permite encriptar y desencriptar un texto según reglas específicas, asegurando que el texto sea procesado adecuadamente antes de la encriptación.
 
 ## Características
 
