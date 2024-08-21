@@ -72,7 +72,7 @@ function cambiarEstilos() {
     txtArea.value = "";
     imagen.remove();
     tituloMensaje.remove();
-    mensaje.style.cssText = 'margin-top: 0; margin-bottom: 3.2rem; font-size: 2.4rem; text-align: left; width: 100%';
+    mensaje.style.cssText = 'margin-top: 0; margin-bottom: 3.2rem; font-size: 2.4rem; text-align: left; word-break: break-word;';
     sectionMensaje.style.cssText = 'justify-content: space-between;';
     btnCopiar.removeAttribute('hidden');
 }

@@ -144,9 +144,6 @@ p {
         display: flex;
         flex-direction: column;
     }
-    #texto_ingresado {
-        margin-bottom: 6.4rem;
-    }
     .boton__contenido {
         flex-direction: row;
     }
