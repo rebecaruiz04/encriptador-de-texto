@@ -7,9 +7,16 @@ let btnCopiar = document.querySelector('.boton-copiar');
 
 // Ajuste de tamaño del text-area
 txtArea.addEventListener("input", e => {
-    console.log(txtArea.scrollHeight);
     txtArea.style.height = '400px';
     txtArea.style.height = txtArea.scrollHeight + 'px';
+});
+
+// Evento que restablece a sus valores iniciales el contenido y los estilos del párrafo, cuando el textarea recibe el 'focus'.
+txtArea.addEventListener("focus", () => {
+    mensaje.innerHTML = 'Ingresa el texto que desees encriptar o desencriptar.';
+    mensaje.style.cssText = '';
+    sectionMensaje.style.cssText = '';
+    btnCopiar.setAttribute('hidden', true);
 });
 
 // Evento de botón encriptar
@@ -45,10 +52,11 @@ function copiarTexto() {
     });
 }
 
-// Función que valida el texto ingresado, no aceptará mayúsculas, tilde o ni que el campo esté vacío
+// Función que valida el texto ingresado, no aceptará el campo vacío mayúsculas, tilde, ni caracteres especiales.
 function validarTextoIngresado(texto) {
     if (texto === "" || !/^[a-z\s]*$/.test(texto)) {
-        alert(texto === "" ? 'No ha ingresado ningún texto. Por lo menos, debe ingresar un caracter.' : 'El texto no debe contener letras mayúsculas ni tildes.');
+        alert(texto === "" ? 'No ha ingresado ningún texto. Por lo menos, debe ingresar un caracter.' : 'El texto no debe contener mayúsculas, tildes ni caracteres especiales. Por favor, ingrese el texto nuevamente.');
+        txtArea.value = "";
         return false;
     }
     return true;
@@ -57,8 +65,6 @@ function validarTextoIngresado(texto) {
 // Función para reeemplazar textos
 function remplazarTexto(stringEncriptada, posicionInicial, posicionFinal) {
     let matrizCodigo = [['e', 'enter'], ['i', 'imes'], ['a', 'ai'], ['o', 'ober'], ['u', 'ufat']];
-    stringEncriptada = stringEncriptada.toLowerCase();
-
     for(let i = 0; i < matrizCodigo.length; i++) {
         if (stringEncriptada.includes(matrizCodigo[i][posicionInicial])) {
             stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][posicionInicial], matrizCodigo[i][posicionFinal]);
@@ -74,5 +80,6 @@ function cambiarEstilos() {
     tituloMensaje.remove();
     mensaje.style.cssText = 'margin-top: 0; margin-bottom: 3.2rem; font-size: 2.4rem; text-align: left; word-break: break-word;';
     sectionMensaje.style.cssText = 'justify-content: space-between;';
+    txtArea.style.cssText = 'min-height: 400px';
     btnCopiar.removeAttribute('hidden');
 }
